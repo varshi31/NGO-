@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>BalineniVarshithaReddy</title>
+        
+    </head>
+    <style>
+    body 
+        
+  {
+    margin: 0;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color:black;
+}
+
+header * {
+    display: inline;
+    height: 50px;
+}
+
+header ul {
+    padding: 0;
+}
+
+header li {
+    margin-left: 20px;
+}
+
+section {
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    background-size: cover; /* Add this line */
+    background-position: center center; /* Add this line */
+    background-repeat: no-repeat; /* Add this line */
+    background-attachment: fixed; /* Add this line */
+}
+
+hero .profile-img {
+    width: 300px;
+    border-radius: 50%;
+    
+}
+
+h3
+        {
+            font-size: 30px;
+        }
+
+hero h1 {
+    font-size: 3em;
+}
+
+section h2 {
+    font-size: 2.5em;
+}
+
+section h3 {
+    font-size: 1.5em;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+#home{
+    background-image: linear-gradient(rgba(255,255,0.75),rgba(255,255,255,0.75)),url('https://s9347.pcdn.co/wp-content/uploads/2018/11/donate.jpg');
+        } 
+#aim
+        {
+            background-image: url('https://cdn.pling.com/img/a/a/b/5/2cb62e43b48edd9ae7499f1fde94d6221e46a2346e0a38fd4519c280595fa95ebb8f.jpg');
+            
+        }
+
+#about {
+    background-color:cornsilk;
+    background-image: url('https://i.pinimg.com/originals/51/84/28/5184284068b648233ad6e9a580f750b6.jpg');
+}
+#donate
+        {
+            background-color:gray;
+            text-decoration-color: white;
+            background-image: url('https://media.istockphoto.com/photos/background-navy-blue-black-grunge-textured-abstract-stucco-concrete-picture-id1287121458?b=1&k=20&m=1287121458&s=170667a&w=0&h=fpITYs5xkVcmHk91kVRDullhDHhZ-f6QpEfTJCVYnSI=');
+            
+            
+        }
+#contact
+        {
+            background-color: bisque;
+            background-image: url('https://media.istockphoto.com/photos/-picture-id1311934969?b=1&k=20&m=1311934969&s=170667a&w=0&h=UQ3F8CE5zam5mT5swIliZ9nO7dhX4ZzsALMufFdv6Ys=')
+        }
+    </style>
+    <script lang="javascript">
+                function donation()
+                    {
+                   var x=document.getElementById('d').value;
+                        //console.log(x);
+                        document.write(x);
+                        if(x=="food")
+                        {
+                          window.location.href="food.html"; 
+                        }
+                        else if(x=="money")
+                            {
+                                window.location.href="money.html";
+                            }
+                        else if(x=="clothe")
+                            {
+                                window.location.href="clothe.html";
+                            }
+                    }
+                
+                </script>
+    <body>
+        <header >
+            <nav>
+                <h1>NGO DONATION</h1>
+				    <li><a href="p1.html" target="_blank">HOME</a></li>
+                    <li><a href="#aim">AIM</a></li>
+					<li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#donate">DONATE</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                
+					 </nav>
+        </header>
+        <main>
+            <section id="home">
+                <div class="section-inner">
+				<img src="https://www.wpexplorer.com/wp-content/uploads/wordpress-best-donation-plugins.jpg">
+                    <h2>TOGETHER WE CAN DO BEAUTIFUL THINGS</h2>
+					<br>
+					<br>
+                </div>
+            </section>
+            <section id="aim">
+            <div class="section-inner">
+               <h2>OUR MISSION</h2><br><br>
+<h3 align="center">One of the main objectives of the Perfect Foundation is to promote the welfare of children in need due to poverty, orphan or social injustice in addition to bring about a positive change in the social structure of the society for a better tomorrow.We urge people from all walks of life to contribute to Perfect Foundation.Together let's solve challenges of the present to protect the future</h4>
+                </div>
+            </section>
+            <section id="about">
+            <div section="section-inner">
+            
+                <h3>Our organization has been started to serve the needy people.We desire to see every Indian  contribute atleast 2% of their income to charity.We are tryring to address the problem using our innovative model.We believe that with the effective use of technology and introducing fundraising website.</h3>
+                </div>
+            </section>
+            <section id="donate">
+            <div class="section-inner">
+                <h1 style="background-color: white">MAKING A DONATION IS THE ULTIMATE SIGN OF SOLIDARITY. ACTIONS SPEAK LOUDER THAN WORD</h1><br><br><br>
+                <p style="color:white;">CHOOSE AN OPTION</p><br>
+                <form name="redirect">
+                <select id="d" name="donar">
+                    <option value="x">------</option>
+                    <option value="food">FOOD</option>
+                    <option value="clothe">CLOTHES</option>
+                    <option value="money">MONEY</option>
+                </select><br><br><br><br><br>
+                    <button onclick="donation();">SUBMIT</button>
+        
+                </form>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="section-inner">
+                <h2>Contact</h2>
+                    <p>Mobile Number : 9542193449<br>Email-Id : varshithareddybalineni07521@gmail.com</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>s
