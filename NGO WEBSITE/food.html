@@ -1,37 +1,149 @@
 <html>
+    <head>
 <style>
 body
 {
 color:black;
     font-family:cursive;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+
+.wrapper{
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  background: white;
+  padding: 60px 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 20px;
+}
+
+.wrapper .title{
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color:black;
+}
+
+
+.wrapper .form .inputfield{
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.wrapper .form .inputfield .input{
+  width: 100%;
+  padding: 12px;
+  padding-left: 30px;
+  border: none;
+  background-color:ghostwhite;
+}
+.wrapper .form .button{
+  width: 70%;
+  margin: 20px auto 0;
+  background-color:white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 25px;
+}
+
+.wrapper .form .button a{
+  color:black;
+}
+.wrapper .form .inputfield i{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color:black;
+}
 </style>
+    </head>
 <body background="https://i.pinimg.com/736x/c1/14/c3/c114c345413eebe514d073473e96c756--cooking-ingredients-food-design.jpg"
 style="background-repeat:no-repeat;background-size:100%">
+    <script>
+        function validation()
+        {
+            var a=document.validationform.name.value;
+            var b=document.validationform.mail.value;
+            var c=document.validationform.num.value;
+            var d=document.validationform.food.value;
+            var e=document.validationform.add.value; 
+            var f=b.indexOf("@");  
+            var g=b.lastIndexOf(".");   
+            if(a=="" || a==null)
+            {
+                    alert("NAME CANNOT BE EMPTY");
+                    return false;
+            }
+            if (f<1 || g<f+2 || g+2>=b.length)
+            {  
+                alert("Please enter a valid e-mail address");  
+                return false;  
+            } 
+            if(c==null || c.length<10)
+            {
+                alert("NUMBER LENGTH SHOULD BE EQUAL TO 10 ");
+                return false;
+            }
+            if(e==""||e==null)
+            {
+                alert("PLEASE PROVIDE YOUR CURRENT ADDRESS");
+                return false;
+            }
+            
+        }
+    </script>
 <center>
 <h1>Food Donation</h1>
-<form action="foodredirect.html" method="POST">
-<table cellspacing="10">
-<br>
-<br>
-<tr><th>Name</th> 
-<td><input type="text" name="n"></td>
-</tr>
-<tr><th>Email</th> 
-<td><input type="email" name="email" size="50"></td>
-</tr>
-<tr><th>Phone number</th>
-<td><input type="number" name="phnnum"></td>
-</tr>
-<tr><th>Food item</th>
-<td><input type="text" name="fooditem"></td>
-</tr>
-<tr><th>Address</th> 
-<td><input type="text" name="address" size="80"</td>
-</tr>
-</table>
-<input type="submit" value="SUBMIT">
-</center>
-</form>
+<form action="foodredirect.html" name="validationform">
+    <div class="wrapper">
+    <div class="title">
+        FOOD DONATION
+        </div>
+<div class="form">
+    <div class="inputfield">
+       NAME : <br><br>
+      <input type="text" name="name" placeholder="Name" class="input">
+    </div><br>
+    EMAIL : <br><br>
+    <div class="inputfield">
+      <input type="text" name="mail" placeholder="ex:abc@gmail.com" class="input">
+    </div> <br>
+     PHONE NUMBER : <br><br>
+     <div class="inputfield">
+      <input type="number" name="num" placeholder="ex:123456789" class="input">
+      </div><br>
+     FOOD ITEM : <br><br>
+    <div class="inputfield">
+        <select name="food">
+        <option>RICE</option>
+        <option>FRUITS</option>
+            <option>VEGETABLES</option>
+            <option>CURRIES</option>
+            <option>OTHERS</option>
+        </select>
+     </div><br>
+     ADDRESS : <br>
+    <div class="inputfield">
+      <input type="text" name="add" placeholder="ex:h-123" class="input">
+    </div>
+    
+    <div class="button">
+      <button onclick="validation()">SUBMIT</button>
+    </div>
+    </div>
+    </div>
+    </form>
+    </center>
 </body>
 </html>
